@@ -6,3 +6,15 @@
  */
 
 'use strict';
+
+async function showMessage(elem, url) {
+    const response = await fetch(url);
+    const text = await response.text();
+    elem.textContent = text; 
+}
+
+async function showList(elem, url) {
+    const response = await fetch(url);
+    const text = await response.json()
+    
+}
